@@ -15,10 +15,13 @@ public class Fill extends Thread {
     for (int i = 1; i <= 10; i++) {
 
 
-      if (i == 10) System.out.printf("Termina el fill %s%n", name);
-      else System.out.printf("%s %d%n", name, i);
+      if (i == 10) System.out.println("Termina el fill "+name);
+      else System.out.println(name + " "+ i);
+
+      Thread.yield();
 
     }
+    
 
   }
 

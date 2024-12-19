@@ -9,11 +9,22 @@ public class Principal {
     Thread juan = new Fill("Juan");
     Thread pepe = new Fill("Pepe");
 
-    pepe.setPriority(9);
-    juan.setPriority(1);
 
-    pepe.start();
-    juan.start();
+    try {
+      pepe.setPriority(5);
+      juan.setPriority(5);
+
+      pepe.start();
+      juan.start();
+
+      pepe.join();
+      juan.join();
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    
 
 
 
