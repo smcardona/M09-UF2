@@ -1,6 +1,6 @@
 # PRUEBAS EJECUTADAS CON EL PROGRAMA
 
-## Prueba 1
+## Meotodo 1
 
 ![prueba1](imgs/prueba1.png)
 

@@ -12,11 +12,14 @@ public class Fill extends Thread {
   @Override
   public void run() {
 
-    for (int i = 1; i < 10; i++) {
-      System.out.println(String.format("%s %d", name, i));
+    for (int i = 1; i <= 10; i++) {
+
+
+      if (i == 10) System.out.printf("Termina el fill %s%n", name);
+      else System.out.printf("%s %d%n", name, i);
+
     }
 
-    System.out.println(String.format("Termina el fill %s", name));
   }
 
 }
