@@ -1,3 +1,5 @@
+package src;
+
 public class MainDemoFil {
   public static void main(String[] args) {
     Thread currentThread = Thread.currentThread();
