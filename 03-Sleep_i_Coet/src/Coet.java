@@ -24,41 +24,45 @@ public class Coet {
 
     if (pow < 0 || pow > 10) throw new IllegalArgumentException("Potència invàlida");
 
-    for (Motor m: motors) {
+    for(Motor m: motors) {
       m.setPotencia(pow);
     }
 
+  }
+
+  public void apaga() {
+    for(Motor m: motors) {
+      m.stopMotor();;
+    }
   }
 
   public static void main(String[] args) {
     
     Coet coet = new Coet(4);
 
-    try {
-      
-      while(true) {
+    while(true) {
+      try {
 
         int pow = requestPower();
 
+        System.out.printf("Passant a potència %d%n", pow);
+
         coet.passaAPotencia(pow);
 
-        if (pow == 0) break;
+        if (pow == 0) {
+          coet.apaga();
+          break;
+        };
+        
+        
+      } catch (Exception e) {
+        e.printStackTrace();
       }
-
-
-    } catch (Exception e) {
-      e.printStackTrace();
     }
-
-    
-
-
-
 
   }
 
   private static int requestPower() throws NumberFormatException, IOException {
-      
     return Integer.parseInt(reader.readLine());
   }
 
