@@ -23,6 +23,8 @@ public class Coet {
   public void passaAPotencia(int pow) throws InterruptedException {
 
     if (pow < 0 || pow > 10) throw new IllegalArgumentException("Potència invàlida");
+    
+    System.out.printf("Passant a potència %d%n", pow);
 
     for(Motor m: motors) {
       m.setPotencia(pow);
@@ -45,7 +47,6 @@ public class Coet {
 
         int pow = requestPower();
 
-        System.out.printf("Passant a potència %d%n", pow);
 
         coet.passaAPotencia(pow);
 

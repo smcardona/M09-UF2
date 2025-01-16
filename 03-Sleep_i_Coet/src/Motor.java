@@ -28,7 +28,7 @@ public class Motor extends Thread {
   @Override
   public void run() {
     running = true;
-        try {
+    try {
 
       while (running) {
         // Mantiene vivo el thread, mientras no se le pida que pare
