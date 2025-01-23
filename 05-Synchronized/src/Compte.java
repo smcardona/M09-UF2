@@ -15,11 +15,11 @@ public class Compte {
 
   public void setSaldo(float saldo) { this.saldo = saldo; }
 
-  public void deposita(float amount) { 
+  public synchronized void deposita(float amount) { 
     this.saldo += Math.abs(amount);
   }
 
-  public void treu(float amount) { 
+  public synchronized void treu(float amount) { 
     this.saldo -= Math.abs(amount);
   }
 
