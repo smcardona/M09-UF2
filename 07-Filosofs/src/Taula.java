@@ -17,8 +17,7 @@ public class Taula {
     // inicia comensals
     comensals = new Filosof[NUM_COMENSALS];
     for(int i = 0; i < NUM_COMENSALS; i++) {
-      int forqDer = i+1;
-      forqDer = forqDer >= NUM_COMENSALS ? 0 : forqDer;
+      int forqDer = (i+1) % NUM_COMENSALS;
 
       comensals[i] = new Filosof(i, forquilles[i], forquilles[forqDer]);
 
