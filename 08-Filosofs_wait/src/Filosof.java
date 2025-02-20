@@ -64,9 +64,9 @@ public class Filosof extends Thread {
     
     if (der.getPropiertary() != Forquilla.LLIURE) {
       izq.deixar();
-      synchronized (this) {
+      /* synchronized (this) {
         notifyAll();
-      }
+      } */
       System.out.printf("Filòsof: %s deixa la esquerra(%d) (dreta ocupada)%n", getName(), izq.index);
       incrementaGana();
     }
